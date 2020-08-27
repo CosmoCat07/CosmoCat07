@@ -8,37 +8,35 @@
     color: red;
 }
 
-.navbar {
-    padding: 50px;
+ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background: #333
+    background-color: #333;
 }
-
-.navitem {
-    box-sizing: border-box;
-    color: red;
+  
+li.navbar {
     float: left;
-    border-right: 1px solid #bbb
+    border-right:1px solid #bbb;
 }
-
-.navitem:last-child {
+  
+li.navbar:last-child {
     border-right: none;
 }
-
-li.navitem a {
+  
+li.navbar a {
     display: block;
+    color: white;
     text-align: center;
     padding: 14px 16px;
-    text-decoration: none
+    text-decoration: none;
 }
-
-li.navitem a:hover {
-    background: #111;
+  
+li.navbar a:hover:not(.active) {
+    background-color: #111;
 }
-
+  
 .active {
     background-color: #4CAF50;
 }
