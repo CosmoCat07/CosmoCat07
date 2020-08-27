@@ -1,5 +1,22 @@
+*{
+    background: deepskyblue;
+}
+
 .mainheader {
     text-align: center;
     font-family: "Trebuchet MS", Helvetica, sans-serif;
     color: red;
+}
+
+.navbar {
+    background: red;
+    padding: 50px;
+}
+
+.navitem {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 10px;
+    color: red;
+    border: 1px solid black
 }
