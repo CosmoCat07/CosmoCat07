@@ -19,6 +19,8 @@
 li.navitem {
     float: left;
     border-right:1px solid #bbb;
+    width: 10%;
+    background: #333;
 }
   
 li.navitem:last-child {
