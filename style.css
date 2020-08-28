@@ -42,7 +42,7 @@ li.navitem a:hover {
     background-color: #4CAF50;
 }
 
-.navbar:last-child {
+.navitem:last-child {
   border-right: none;
 }
 
