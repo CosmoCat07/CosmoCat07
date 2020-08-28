@@ -1,4 +1,3 @@
-var menu = document.getElementById("home-menubar");
 var homebar = document.getElementById("home-navbar");
 var hidden = true
 
