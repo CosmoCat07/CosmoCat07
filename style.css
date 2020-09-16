@@ -66,3 +66,22 @@ p.text1 {
   color: #bbb;
   overflow: hidden;
 }
+
+.menubar::selection {
+  background: #bbb;
+  color: #bbb;
+}
+
+.menubar::-moz-selection {
+  background: #bbb;
+  color: #bbb;
+}
+
+::selection {
+  background: red;
+  color: #bbb
+}
+
+li.navitem a::selection {
+  background: #333;
+}
