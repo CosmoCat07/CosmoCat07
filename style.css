@@ -85,3 +85,8 @@ p.text1 {
 li.navitem a::selection {
   background: #333;
 }
+
+hr {
+  height: 2px;
+  background-color: #bbb;
+}
