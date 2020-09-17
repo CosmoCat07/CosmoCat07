@@ -1,11 +1,13 @@
 *{
     background: #333;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 
 .mainheader {
     text-align: center;
     font-family: "Trebuchet MS", Helvetica, sans-serif;
     color: red;
+    font-size: 35px;
 }
 
 .navbar {
