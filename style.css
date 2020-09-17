@@ -13,7 +13,7 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: #555;
     height: 65;
     display: inline-block;
 }
@@ -22,7 +22,7 @@ li.navitem {
     float: left;
     border-right:1px solid #bbb;
     width: 100px;
-    background: #333;
+    background: #555;
 }
   
 li.navitem a {
@@ -78,15 +78,23 @@ p.text1 {
 }
 
 ::selection {
-  background: red;
+  background: #8B0000;
   color: #bbb
 }
 
 li.navitem a::selection {
-  background: #333;
+  background: #555;
 }
 
 hr {
   height: 2px;
   background-color: #bbb;
+}
+
+#aboutText {
+  display: inline-block;
+  width: 70%;
+  margin: auto;
+  position: relative;
+  left: 15%;
 }
