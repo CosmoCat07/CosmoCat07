@@ -15,7 +15,7 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #555;
+    background-color: #333;
     height: 65;
     display: inline-block;
 }
@@ -23,25 +23,21 @@
 li.navitem {
     float: left;
     border-right:1px solid #bbb;
-    width: 100px;
-    background: #555;
+    width: 115px;
+    height: 40px;
+    background: #333;
 }
   
 li.navitem a {
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 14px 5%;
     text-decoration: none;
-    background: #333;
 }
   
 li.navitem a:hover {
     background-color: #111;
-}
-  
-.active {
-    background-color: #4CAF50;
 }
 
 .navitem:last-child {
@@ -100,4 +96,29 @@ hr {
   margin: auto;
   position: relative;
   left: 15%;
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+  border: 1px solid red;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
 }

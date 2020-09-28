@@ -2,23 +2,13 @@
 <html lang="en-US">
 <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css"/>
     <link rel="icon" href="cosmo.png"/>
     <title>CosmoCat07</title>
 </head>
-<body>
-      <div id="home-menubar" class="menuicon" onclick="navbar()">
-      <div class="menubar">1</div>
-      <div class="menubar">1</div>
-      <div class="menubar">1</div> 
-    </div>
-    <ul id="home-navbar" class="navbar">
-        <li class="navitem">
-            <a class="active" href="index.html">Home</a>
-        </li>
-        <li class="navitem">
-            <a href="about.html">About Me</a>
-        </li>
+<body onload="nav.menu('homeNavbar')">
+    <ul id="homeNavbar" class="navbar">
     </ul>
     <h1 class="mainheader" style="font-size: 35px;">I'm CosmoCat07,</h1>
     <p class="text1">An electronically obsessed teenager</p>
@@ -30,6 +20,9 @@
     <br/>
     <br/>
     <p class="text1">Check out my streams <a href="https://twitch.tv/cosmocat19" style="color: red; text-decoration: none;">HERE</a></p>
+    <br/>
+    <p class="text1">Join my Discord <a href="https://top.gg/servers/722180872605925478/join" style="color: red; text-decoration: none;">
+    HERE</a></p>
     <script src="script.js"></script>
 </body>
 </html>
