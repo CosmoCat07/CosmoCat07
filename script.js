@@ -29,10 +29,10 @@ var nav = {
   menu : function(id) {
     nav.icon();
     var bar = document.getElementById(id);
-    this.addButton(bar,"Home","index");
-    this.addButton(bar,"About","about");
-    this.addButton(bar,"My Streams","twitch");
-    this.addButton(bar,"My Setup","setup");
+    this.addButton(bar,"Home","index.html");
+    this.addButton(bar,"About","about.html");
+    this.addButton(bar,"My Streams","twitch.html");
+    this.addButton(bar,"My Setup","setup.html");
   },
   addNavLink : function(text, page) {
     var link = document.createElement("a");
