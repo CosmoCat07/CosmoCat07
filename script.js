@@ -106,14 +106,12 @@ var xml = {
     }
   },
   processButtons : function(xml) {
-    var x, y, i, xmlDoc, txt, lnks,
+    var x, y, i, xmlDoc;
     xmlDoc = xml.responseXML;
-    txt = [];
-    lnks = [];
     x = xmlDoc.getElementsByTagName("name");
     y = xmlDoc.getElementsByTagName("link");
     for (i = 0; i < x.length; i++) {
       nav.addButton(bar, x[i].childNodes[0].nodeValue, y[i].childNodes[0].nodeValue)
     }
-    }
+  }
   }
