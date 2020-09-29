@@ -9,3 +9,14 @@
     <name>About</name>
     <link>about.html</link>
   </button>
+
+  <button>
+    <name>My Streams</name>
+    <link>twitch.html</link>
+  </button>
+
+  <button>
+    <name>Setup</name>
+    <link>setup.html</link>
+  </button>
+</buttons>

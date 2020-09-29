@@ -31,11 +31,12 @@ var nav = {
   },
   menu : function(id) {
     nav.icon();
+    var buttons;
     var bar = document.getElementById(id);
-    this.addButton(bar,"Home", "index.html");
-    this.addButton(bar,"About","about.html");
-    this.addButton(bar,"My Streams","twitch.html");
-    this.addButton(bar,"My Setup","setup.html");
+    buttons[1] = this.addButton(bar,"Home", "index.html");
+    buttons[2] = this.addButton(bar,"About","about.html");
+    buttons[3] = this.addButton(bar,"My Streams","twitch.html");
+    buttons[4] = this.addButton(bar,"My Setup","setup.html");
   },
   addNavLink : function(text, page) {
     var link = document.createElement("a");
@@ -95,3 +96,28 @@ var load = {
     resize.check(about);
   }
 };
+
+var xml = {
+  loadButtons : function() {
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        xml.processButtons(this);
+      };
+      xmlhttp.open("GET","XML/buttons.xml", true);
+      xmlhttp.send();
+    }
+  },
+  processButtons : function(xml) {
+    var x, y, i, xmlDoc, txt, links, buttons;
+    xmlDoc = xml.responseXML;
+    txt = [];
+    links = [];
+    x = xmlDoc.getElementsByTagName("name");
+    y = xmlDoc.getElementsByTagName("link");
+    for (i = 0; i < x.length; i++) {
+      txt[i] = x[i].childNodes[0].nodeValue;
+      links[i] = y[i].childNodes[0].nodeValue;
+    }
+  }
+}
