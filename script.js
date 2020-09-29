@@ -1,5 +1,6 @@
 var homebar = document.getElementById("homeNavbar");
 var hidden = true
+let bar = document.getElementById(id);
 
 var getUrl = window.location;
 let baseUrl = getUrl .protocol + "//" + getUrl.host + "/" + getUrl.pathname.split('/')[1];
@@ -31,8 +32,6 @@ var nav = {
   },
   menu : function(id) {
     nav.icon();
-    var buttons;
-    var bar = document.getElementById(id);
     xml.loadButtons(bar);
   },
   addNavLink : function(text, page) {
@@ -95,23 +94,27 @@ var load = {
 };
 
 var xml = {
-  loadButtons : function(bar) {
+  loadButtons : function() {
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
-        xml.processButtons(this, bar);
+        xml.processButtons(this);
       };
       xmlhttp.open("GET","XML/buttons.xml", true);
       xmlhttp.send();
     }
   },
-  processButtons : function(xml, bar) {
-    var x, y, i, xmlDoc;
+  processButtons : function(xml) {
+    var x, y, i, xmlDoc, name, link;
     xmlDoc = xml.responseXML;
     x = xmlDoc.getElementsByTagName("name");
     y = xmlDoc.getElementsByTagName("link");
+    name = [];
+    link = [];
     for (i = 0; i < 5; i++) {
-      nav.addButton(bar, x[i].childNodes[0].nodeValue, y[i].childNodes[0].nodeValue)
+      name.push(x[i].childNodes[0].nodeValue);
+      link.push(y[i].childNodes[0].nodeValue);
+      nav.addButton(bar, name, link);
     }
   }
   }
