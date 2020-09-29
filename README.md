@@ -1,1 +1,1 @@
-I'm Cosmo, otherwise known as CosmoCat19 or CosmoCat07. To learn more about me, click [here](https://cosmocat07.ml/about)!
+I'm Cosmo, otherwise known as CosmoCat19 or CosmoCat07. To learn more about me, click [here](https://cosmocat07.ml/about.html)!
