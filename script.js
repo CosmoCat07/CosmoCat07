@@ -1,6 +1,9 @@
 var homebar = document.getElementById("homeNavbar");
 var hidden = true
 
+var getUrl = window.location;
+let baseUrl = getUrl .protocol + "//" + getUrl.host + "/" + getUrl.pathname.split('/')[1];
+
 function navbar() {
   if (hidden == true) {
     homebar.style.visibility = "visible";
@@ -29,7 +32,7 @@ var nav = {
   menu : function(id) {
     nav.icon();
     var bar = document.getElementById(id);
-    this.addButton(bar,"Home","index.html");
+    this.addButton(bar,"Home", "index.html");
     this.addButton(bar,"About","about.html");
     this.addButton(bar,"My Streams","twitch.html");
     this.addButton(bar,"My Setup","setup.html");
@@ -37,7 +40,7 @@ var nav = {
   addNavLink : function(text, page) {
     var link = document.createElement("a");
     link.className = "navlink";
-    link.href = page;
+    link.onclick = () => window.location.assign(page);
     var textNode = document.createTextNode(text);
     link.appendChild(textNode);
     link.fontSize = "medium";

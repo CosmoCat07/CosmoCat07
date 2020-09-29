@@ -1,4 +1,1 @@
-### Hi there 👋
-
-
-I'm CosmoCat07, CosmoCat19, or just Cosmo. To learn more about me, check out https://cosmocat07.github.io/CosmoCat07/about
+I'm Cosmo, otherwise known as CosmoCat19 or CosmoCat07. To learn more about me, click [here](https://cosmocat07.ml/about)!
