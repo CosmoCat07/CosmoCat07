@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<buttons>
+  <button>
+    <name>Home</name>
+    <link>index.html</link>
+  <button>
+
+  <button>
+    <name>About</name>
+    <link>about.html</link>
+  </button>
