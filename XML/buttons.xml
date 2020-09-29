@@ -3,26 +3,21 @@
   <button>
     <name>Home</name>
     <link>index.html</link>
-  <button>
-
+  </button>
   <button>
     <name>About</name>
     <link>about.html</link>
   </button>
-
   <button>
     <name>My Streams</name>
     <link>twitch.html</link>
   </button>
-
   <button>
     <name>Setup</name>
     <link>setup.html</link>
   </button>
-
-  <button>
+  <!--<button>
     <name>Partners</name>
     <link>partners.html</link>
-  </button>
-  
+  </button>-->
 </buttons>

@@ -1,6 +1,9 @@
 var homebar = document.getElementById("homeNavbar");
 var hidden = true
-let bar = document.getElementById(id);
+
+var buttons = new Object();
+buttons.name = [];
+buttons.link = [];
 
 var getUrl = window.location;
 let baseUrl = getUrl .protocol + "//" + getUrl.host + "/" + getUrl.pathname.split('/')[1];
@@ -32,6 +35,7 @@ var nav = {
   },
   menu : function(id) {
     nav.icon();
+    var bar = document.getElementById(id);
     xml.loadButtons(bar);
   },
   addNavLink : function(text, page) {
@@ -66,7 +70,7 @@ var resize = {
     }
   },
   smallButton : function(item) {
-    item.style.width = "92px";
+    item.style.width = "110px";
     var text = item.childNodes[0].style;
     text.fontSize = "small";
     return item;
@@ -94,27 +98,39 @@ var load = {
 };
 
 var xml = {
-  loadButtons : function() {
+  loadButtons : function(bar) {
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
-        xml.processButtons(this);
-      };
+        xml.processButtons(this, bar);
+        console.log("Done");
+      }
+    };
+      xml.responseType = "document";
       xmlhttp.open("GET","XML/buttons.xml", true);
+      xmlhttp.overrideMimeType("text/xml");
       xmlhttp.send();
-    }
   },
-  processButtons : function(xml) {
-    var x, y, i, xmlDoc, name, link;
-    xmlDoc = xml.responseXML;
-    x = xmlDoc.getElementsByTagName("name");
-    y = xmlDoc.getElementsByTagName("link");
-    name = [];
-    link = [];
-    for (i = 0; i < 5; i++) {
+  processButtons : function(xml, bar) {
+    var parser = new DOMParser();
+    var xmlDoc = parser.parseFromString(xml.responseText, "application/xml");
+    var button = xmlDoc.getElementsByTagName("button");
+    for (i = 0; i < button.length; i++) {
+    };
+    var x = [];
+    var y = [];
+    for (i = 0; i < button.length; i++) {
+      x[i] = button[i].getElementsByTagName("name")[0];
+      y[i] = button[i].getElementsByTagName("link")[0];
+    }
+    var name = new Array();
+    var link = new Array();
+    for (i = 0; i < x.length; i++) {
       name.push(x[i].childNodes[0].nodeValue);
       link.push(y[i].childNodes[0].nodeValue);
-      nav.addButton(bar, name, link);
-    }
+      nav.addButton(bar, name[i], link[i])
+    };
+    buttons.name = name;
+    buttons.link = link;
   }
   }
