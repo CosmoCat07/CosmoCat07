@@ -33,10 +33,7 @@ var nav = {
     nav.icon();
     var buttons;
     var bar = document.getElementById(id);
-    buttons[1] = this.addButton(bar,"Home", "index.html");
-    buttons[2] = this.addButton(bar,"About","about.html");
-    buttons[3] = this.addButton(bar,"My Streams","twitch.html");
-    buttons[4] = this.addButton(bar,"My Setup","setup.html");
+    xml.loadButtons();
   },
   addNavLink : function(text, page) {
     var link = document.createElement("a");
@@ -109,15 +106,14 @@ var xml = {
     }
   },
   processButtons : function(xml) {
-    var x, y, i, xmlDoc, txt, links, buttons;
+    var x, y, i, xmlDoc, txt, lnks,
     xmlDoc = xml.responseXML;
     txt = [];
-    links = [];
+    lnks = [];
     x = xmlDoc.getElementsByTagName("name");
     y = xmlDoc.getElementsByTagName("link");
     for (i = 0; i < x.length; i++) {
-      txt[i] = x[i].childNodes[0].nodeValue;
-      links[i] = y[i].childNodes[0].nodeValue;
+      nav.addButton(bar, x[i].childNodes[0].nodeValue, y[i].childNodes[0].nodeValue)
+    }
     }
   }
-}
