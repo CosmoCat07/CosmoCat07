@@ -33,7 +33,7 @@ var nav = {
     nav.icon();
     var buttons;
     var bar = document.getElementById(id);
-    xml.loadButtons();
+    xml.loadButtons(bar);
   },
   addNavLink : function(text, page) {
     var link = document.createElement("a");
@@ -95,17 +95,17 @@ var load = {
 };
 
 var xml = {
-  loadButtons : function() {
+  loadButtons : function(bar) {
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
-        xml.processButtons(this);
+        xml.processButtons(this, bar);
       };
       xmlhttp.open("GET","XML/buttons.xml", true);
       xmlhttp.send();
     }
   },
-  processButtons : function(xml) {
+  processButtons : function(xml, bar) {
     var x, y, i, xmlDoc;
     xmlDoc = xml.responseXML;
     x = xmlDoc.getElementsByTagName("name");
