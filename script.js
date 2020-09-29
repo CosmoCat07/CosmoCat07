@@ -110,7 +110,7 @@ var xml = {
     xmlDoc = xml.responseXML;
     x = xmlDoc.getElementsByTagName("name");
     y = xmlDoc.getElementsByTagName("link");
-    for (i = 0; i < x.length; i++) {
+    for (i = 0; i < 5; i++) {
       nav.addButton(bar, x[i].childNodes[0].nodeValue, y[i].childNodes[0].nodeValue)
     }
   }
