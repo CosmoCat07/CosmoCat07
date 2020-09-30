@@ -5,9 +5,6 @@ var buttons = new Object();
 buttons.name = [];
 buttons.link = [];
 
-var getUrl = window.location;
-let baseUrl = getUrl .protocol + "//" + getUrl.host + "/" + getUrl.pathname.split('/')[1];
-
 function navbar() {
   if (hidden == true) {
     homebar.style.visibility = "visible";
@@ -127,6 +124,7 @@ var xml = {
     var link = new Array();
     for (i = 0; i < x.length; i++) {
       name.push(x[i].childNodes[0].nodeValue);
+      console.log(name[i]);
       link.push(y[i].childNodes[0].nodeValue);
       nav.addButton(bar, name[i], link[i])
     };
