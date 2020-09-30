@@ -16,8 +16,8 @@
     <name>Setup</name>
     <link>setup.html</link>
   </button>
-  <button>
+  <!--<button>
     <name>Partners</name>
     <link>partners.html</link>
-  </button>
+  </button>-->
 </buttons>
