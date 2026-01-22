@@ -1,1 +1,2 @@
-I'm Cosmo, otherwise known as CosmoCat19 or CosmoCat07. To learn more about me, click [here](https://cosmocat07.ml/about.html)!
+Electrical Engineering student at Virginia Tech.
+Comic nerd, guitarist, metalhead
